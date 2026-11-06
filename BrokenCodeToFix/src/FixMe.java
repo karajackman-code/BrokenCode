@@ -32,22 +32,22 @@ public class FixMe {
 					// current character = charAt(i)
 					currentChar = input.charAt(j);
 					// if the current and previous char are the same
-				}
-				if (currentChar == previousChar) {
-					// increase the count
-					currentCount++;
-				}
-				// else
-				else {
-					// print current count + " " + previousChar
-					output += currentCount + " " + previousChar;
-					// currentCount = 1
-					currentCount = 1;
+					if (currentChar == previousChar) {
+						// increase the count
+						currentCount++;
+					}
+					// else
+					else {
+						// print current count + " " + previousChar
+						output += currentCount + " " + previousChar + " ";
+						// currentCount = 1
+						currentCount = 1;
+					}
 				}
 				// If we're on the last character
 				if (j == input.length() - 1) {
 					// add the count to the output
-					output += currentCount;
+                    output+= currentCount + " " +currentChar+" ";
 				}
 			} 
 			// Print newline
